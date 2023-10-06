@@ -1,0 +1,262 @@
+﻿body {
+    background-color: antiquewhite;
+    height: 500px;
+    background-position: top;
+    background-repeat: repeat;
+    font-family: "Oxygen", sans-serif;
+}
+
+.flexHome {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.747);
+    border-radius: 20px;
+    padding: 32px 46px;
+    color: #b6b0a9;
+    min-height: 850px
+}
+
+    .mainDiv {
+        height: 350px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body .title, .subtitle, .errorText {
+        font-family: "Courier New", monospace;
+        text-align: center;
+        color: #b6b0a9;
+        font-size: 35px;
+        font-weight: 300;
+        padding: 15px;
+    }
+
+    body .subtitle {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: left;
+        margin: 9px 0px;
+        padding: 0px 100px;
+        padding: 0px 100px;
+    }
+
+    body .errorText {
+        padding: 40px;
+        font-size: 50px;
+        color: #ce8484;
+        font-weight: 700;
+    }
+
+    body .simpleText {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    body hr {
+        background-color: #FFFFFF2B;
+        height: 1px;
+        border: 0;
+    }
+
+
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+        padding: 10px 12px;
+    }
+
+        .addEmp, .search {
+            float: left;
+            text-decoration: none;
+            transition-duration: 0.4s;
+            font-weight: 400;
+            border-radius: 12px;
+            margin: 5px;
+            line-height: 2;
+            height: 60px;
+            color: #ABA8A4;
+            border: 1px solid #FFFFFF2B;
+            background-color: #aba8a43b;
+            padding: 5px 20px;
+        }
+
+        .addEmp {
+            text-align: center;
+            cursor: pointer;
+            background-color: transparent;
+            padding: 5px;
+            width: 80px;
+            
+        }
+
+        .addEmp:hover, .search:hover {
+            color: #b6b0a9;
+            border: 1px solid #b6b0a9;
+            text-decoration: none;
+        }
+
+        .addEmp:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        ul ::placeholder {
+            color: #b6b0a9;
+            opacity: 1;
+        }
+
+
+    .tableDiv {
+        height: 350px;
+        overflow: auto; 
+    }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #aba8a458;
+        }
+
+        .tabContent:hover {
+            background-color: #aba8a43b;
+        }
+
+
+    .formDiv {
+        height: 350px;
+        overflow: auto; 
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+            label {
+                display: block;
+                visibility: hidden;
+                padding: 0;
+            }
+
+            .divField {
+                flex: 0 0 48%;
+                margin-bottom: 0px;
+            }
+
+            .divField input, select {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #FFFFFF2B;
+                border-radius: 4px;
+                box-sizing: border-box;
+                color: #898076;
+            }
+
+            .adressField {
+                flex-basis: 100%;
+
+            }
+
+            form ::placeholder {
+                color: #b6b0a9b9;
+                opacity: 1;
+            }
+
+            .submitBut {
+                flex-basis: 100%;
+                transition-duration: 0.4s;
+                font-weight: 400;
+                border-radius: 4px;
+                line-height: 2;
+                height: 60px;
+                color: #ABA8A4;
+                border: 1px solid #FFFFFF2B;
+                background-color: #aba8a43b;
+                padding: 10px;
+                cursor: pointer;
+
+            }
+
+            .submitBut:hover {
+                color: #b6b0a9;
+                background-color: #aba8a486;
+                border: 1px solid #b6b0a9;
+                text-decoration: none;
+            }
+
+footer {
+    margin: 10px;
+    text-align: center;
+    color: #ABA8A4;
+    font-size: 12px;
+}
+
+
+
+
+
+@media (max-width: 599px) {
+    .flexHome {
+        padding: 32px 23px;
+        margin: 15px 15px 32px 15px;
+    }
+
+    .button {
+        list-style: none;
+        justify-content: center;
+        padding: 4px;
+    }
+
+}
+
+@media (min-width: 600px) {
+
+    .flexHome {
+        margin: 30px 20px 64px 20px;
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    .flexHome {
+        margin: 30px 20px 108px 20px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .flexHome {
+        margin: 30px 50px 108px 50px;
+    }
+
+}
+
+@media (min-width: 1500px) {
+
+    .flexHome {
+        margin: 30px 100px 108px 100px;
+    }
+
+}
+
+@media (min-width: 1800px) {
+
+    .flexHome {
+        margin: 30px 150px 108px 150px;
+    }
+
+}
