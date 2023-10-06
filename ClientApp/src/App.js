@@ -16,8 +16,6 @@ const App = () => {
     // Trae lista de empleados, sea completa o filtrada.
     const pullEmployees = async (name) => {
 
-        console.log(name)
-
         const response = await fetch("/api/tblemployee/buscar/" + name);
 
         if (response.ok) {
@@ -25,7 +23,7 @@ const App = () => {
             setEmployees(data);
 
         } else {
-            console.log("ERROR");
+            console.log(response);
         }
     }
 
@@ -51,8 +49,6 @@ const App = () => {
 
         if (response.ok) { 
             const validEmail = await response.text();
-
-            console.log(validEmail)
 
            if (validEmail === "OK") {
                setShowForm(!showForm);
