@@ -87,24 +87,17 @@ namespace PruebaDJ.Controllers
             // Consulta con filtro.
 
         [HttpGet]
-        [Route("Buscar/{employeeName?}")]
+        [Route("Buscar/{employeeName}")]
         public async Task<IActionResult> Buscar(string employeeName)
         {
             try
             {
-                if (!string.IsNullOrEmpty(employeeName))
-                {
                     List<TblEmployee> employees = await _dbcontext.TblEmployees
                         .Where(x => x.Nombre.ToLower().Contains(employeeName.ToLower()) || x.Apellidos.ToLower().Contains(employeeName.ToLower()))
                         .ToListAsync();
 
                     return StatusCode(StatusCodes.Status200OK, employees);
-                }
-                else
-                {
-                    List<TblEmployee> employees = await _dbcontext.TblEmployees.OrderByDescending(c => c.EmployeeId).ToListAsync();
-                    return StatusCode(StatusCodes.Status200OK, employees);
-                }
+
             }
             catch (Exception ex)
             {
